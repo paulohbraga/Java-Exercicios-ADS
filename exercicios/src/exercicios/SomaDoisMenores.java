@@ -5,7 +5,7 @@ import exercicios.Reader;
 public class SomaDoisMenores {
 
 	public static void main(String[] args) throws Exception {
-		double maior = 0, menor1 = 0, menor2 = 0, valor1 = 0, valor2 = 0, valor3 = 0, resultado = 0;
+		double menor1 = 0, menor2 = 0, valor1 = 0, valor2 = 0, valor3 = 0, resultado = 0;
 		
 		System.out.print("Insira o primeiro valor: ");
 		valor1 = Reader.leitor();

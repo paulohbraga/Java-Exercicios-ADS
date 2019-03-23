@@ -1,11 +1,10 @@
 package exercicios;
 
-import exercicios.Reader;
 
 public class MediaNotas {
 
 	public static void main(String[] args) throws Exception {
-		double nota1, nota2, nota3, media;
+		double nota1 = 0, nota2 = 0, nota3 = 0, media = 0 ;
 		
 		System.out.println("- - - - - Calcula Média notas - - - - -");
 		

@@ -3,6 +3,8 @@ import java.io.InputStreamReader;
 import java.io.BufferedReader;
 
 
+/* inserir horas, minutos e segundos */
+
 public class HoraParaSegundos {
 
 	public static void main(String[] args) throws Exception {

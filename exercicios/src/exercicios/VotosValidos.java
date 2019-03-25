@@ -18,9 +18,7 @@ public class VotosValidos {
 		nulo = Reader.leitor();
 				
 		double totalvotos = cand1 + cand2 + brancos + nulo;
-		
-		double invalidos = brancos + nulo;
-		
+				
 		validos = (100 * (cand1 + cand2) / totalvotos); 
 		
 		System.out.println(validos);

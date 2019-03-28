@@ -4,19 +4,19 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.border.BevelBorder;
+import javax.swing.SwingConstants;
+import javax.swing.JTable;
+import java.awt.Color;
 
 public class MinhaJanela extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtA;
@@ -27,6 +27,7 @@ public class MinhaJanela extends JFrame {
 	private JLabel labelX2 = new JLabel("X2:");
 	private JLabel lblNewLabel;
 	private JLabel message;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -51,7 +52,8 @@ public class MinhaJanela extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setForeground(Color.LIGHT_GRAY);
+		contentPane.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
@@ -64,28 +66,28 @@ public class MinhaJanela extends JFrame {
 				double b = Double.parseDouble(txtB.getText());
 				double c = Double.parseDouble(txtC.getText());
 				
-				
 				double delta = Math.pow(b, quadrado) - 4*(a*c);
 				
 				double x1 = (-b + Math.sqrt(delta)) / (2 * a);
 				double x2 = (-b - Math.sqrt(delta)) / (2 * a);
 				
 				if (delta < 0) {
-					
 					message.setText("Delta negativo, não existem raízes reais");
+					
 					labelX1.setText("X1: Não real ");
 					labelX2.setText("X2: Não real");
 					
-				}else if(delta == 0) {
+				} else if (delta == 0) {
 					message.setText("Delta = 0, entao temos 2 raízes iguais");
 					
 					labelX1.setText("X1: " + Double.toString(x1));
 					labelX2.setText("X2: " + Double.toString(x2));
-				}else {
+				} else {
 					message.setText("Delta positivo, as raízes são diferentes");
 					
 					labelX1.setText("X1: " + Double.toString(x1));
 					labelX2.setText("X2: " + Double.toString(x2));
+					
 				}
 				
 			}
@@ -109,6 +111,7 @@ public class MinhaJanela extends JFrame {
 		txtC.setBounds(317, 92, 93, 28);
 		contentPane.add(txtC);
 		txtC.setColumns(10);
+		labelX1.setFont(new Font("Lucida Grande", Font.BOLD, 13));
 		
 		labelX1.setBounds(166, 133, 105, 26);
 		contentPane.add(labelX1);
@@ -119,12 +122,18 @@ public class MinhaJanela extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		labelX2 = new JLabel("X2:");
+		labelX2.setFont(new Font("Lucida Grande", Font.BOLD, 13));
 		labelX2.setBounds(166, 156, 105, 26);
 		contentPane.add(labelX2);
 		
 		message = new JLabel("");
+		message.setHorizontalAlignment(SwingConstants.CENTER);
 		message.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
 		message.setBounds(64, 194, 322, 16);
 		contentPane.add(message);
+		
+		table = new JTable();
+		table.setBounds(66, 212, 27, -12);
+		contentPane.add(table);
 	}
 }

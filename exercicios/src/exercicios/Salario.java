@@ -5,13 +5,19 @@ import java.io.InputStreamReader;
 
 public class Salario {
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception{
 		
 		double salario = 0;
 		int classeint = 0;
 			
 		System.out.print("Salario: ");
-		salario = Double.parseDouble((new BufferedReader(new InputStreamReader(System.in))).readLine());
+		try {
+			
+			salario = Double.parseDouble((new BufferedReader(new InputStreamReader(System.in))).readLine());
+		} catch (Exception e) {
+			System.out.println("Erro de tipo: " + e);
+
+		}
 			
 		System.out.println("1 para gerente");
 		System.out.println("2 para supervisor");
@@ -35,6 +41,8 @@ public class Salario {
 				salario = salario * 1.2;
 				System.out.println("Salario: " + salario + "\nFim do programa!");
 				break;	
+			} else {
+				
 			}			
 		}
 		System.out.println("Fim do programa");

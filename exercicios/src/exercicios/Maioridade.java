@@ -21,6 +21,7 @@ public class Maioridade {
 			System.out.println("Você é menor da idade");
 		}
 
+		
 	}
 
 }

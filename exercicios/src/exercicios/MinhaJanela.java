@@ -14,6 +14,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.SwingConstants;
 import javax.swing.JTable;
 import java.awt.Color;
+import java.awt.SystemColor;
 
 public class MinhaJanela extends JFrame {
 
@@ -52,6 +53,7 @@ public class MinhaJanela extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.window);
 		contentPane.setForeground(Color.LIGHT_GRAY);
 		contentPane.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		setContentPane(contentPane);

@@ -8,7 +8,7 @@ public class Switch {
 		String leitor = null;
 		// System.out.println(leitor.length()); // return a NullPointerException
 		System.out.print("Insert a number: ");
-		leitor = (new BufferedReader(new InputStreamReader(System.in))).readLine();
+		leitor = new BufferedReader(new InputStreamReader(System.in)).readLine();
 		//System.out.println(leitor.length()); // return a string size
 		
 		switch (Integer.parseInt(leitor)) {

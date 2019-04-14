@@ -22,7 +22,7 @@ public class DoWhileMenu {
 			option = Integer.parseInt(leitor);
 			
 			if (option == 1) {
-				System.out.println("Tabuada de Soma de: "+ option);
+				System.out.println("Tabuada de Soma : ");
 				for (int j = 0; j < 10; j++) {
 					for (int i = 1; i < 10; i++) {
 						System.out.println(j + " + " + i + ": " + (j + i));
@@ -31,9 +31,12 @@ public class DoWhileMenu {
 				}
 			} else if (option == 2) {
 				
-				System.out.println("Tabuada de Soma de: "+ option);
-				for (int i = 1; i < 10; i++) {
-					System.out.println(2 + " + " + i + ": " + (2 - i));
+				System.out.println("Tabuada de Subtração: ");
+				for (int j = 0; j < 10; j++) {
+					for (int i = 1; i < 10; i++) {
+						System.out.println(j + " - " + i + ": " + (j - i));
+					}
+					System.out.println("\r");
 				}
 			}
 			

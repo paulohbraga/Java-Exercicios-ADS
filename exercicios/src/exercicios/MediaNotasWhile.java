@@ -5,7 +5,7 @@ import exercicios.Reader;
 public class MediaNotasWhile {
 
 	public static void main(String[] args) throws Exception {
-		
+
 		//Reader leitor = new Reader();
 		double media = 0, totalnotas = 0; int numnotas;
 		
@@ -17,7 +17,7 @@ public class MediaNotasWhile {
 		int i = 0; // iterador
 		while (i < numnotas) {
 			System.out.print("Insira a nota: ");
-			totalnotas += Reader.leitor();	
+			totalnotas += Reader.leitor();
 			System.out.println(totalnotas);
 			i++;
 

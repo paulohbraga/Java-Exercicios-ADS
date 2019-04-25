@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 public class Tabuada {
 	public static void main(String[] args) throws Exception {
 		int option;
-		String leitor = "";
+		String leitor;
 		
 		
 		do {

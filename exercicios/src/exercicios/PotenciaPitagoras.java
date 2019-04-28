@@ -1,52 +1,24 @@
 package exercicios;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 public class PotenciaPitagoras {
 	public static void main(String[] args) throws Exception {
-		int num = 0;
+		int i = 0;
 		int contador = 0;
-		int quadrado = 0;
-		String leitor;
-		System.out.println("Calculo do quadrado de n - Pitágoras\nÉ a soma dos numeros anteriores impares");
-		System.out.print("Insira o número que deseja calcular: ");
-		leitor = new BufferedReader(new InputStreamReader(System.in)).readLine();
-		num = Integer.parseInt(leitor);
+		int somadosimpares = 0;
+		int num = 10;
 		
-		while (contador < num + num) {
-			if (contador % 2 != 0) {
-				quadrado += contador;
+		
+		while(contador <= num) {
 
+			if(i % 2 == 0) {
+				contador++;
+			}else {
+				System.out.println(i + " é impar");
+				somadosimpares = somadosimpares + i;
 			}
-			contador++;
+			i++;
 		}
-		System.out.println(quadrado);
+		System.out.println(somadosimpares);
+
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//		for (int i = 1; i <= num + num; i++) {
-//			if (i % 2 != 0) {
-//				contador = contador + i;
-//			}
-//		}

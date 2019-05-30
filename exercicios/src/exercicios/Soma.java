@@ -1,12 +1,13 @@
 package exercicios;
 
-public class Soma {
-	public static void main(String [] args) {
-		int x, y, soma;
-		x = 10;
-		y = 20;
-		soma = x + y;
-		System.out.println(soma);
-	}
 
+public class Soma {
+	
+	private double num2;
+	private double num1;
+
+		
+	public double soma(double num1, double num2) {
+		return num1 + num2;		
+	}
 }

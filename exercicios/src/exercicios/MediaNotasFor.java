@@ -10,12 +10,15 @@ public class MediaNotasFor {
 		int abaixo = 0;
 		int acima = 0;
 		int soma = 0;
-		int total_alunos = 0;
-		int[] nota = new int[20];
 		
+		int total_alunos;
 		System.out.print("Quantidade de alunos: ");
 		total_alunos = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
+
 		
+		int[] nota = new int[total_alunos+1];
+		
+
 		for (int i = 1; i <= total_alunos; i++) {
 			nota[i] = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
 			soma = soma + nota[i];

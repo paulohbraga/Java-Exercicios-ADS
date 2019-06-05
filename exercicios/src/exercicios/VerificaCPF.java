@@ -5,9 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class VerificaCPF {
-
-
-
+	
 	private int[] cpf = new int[11];
 	private int[] cpf2 = new int[9];
 	private int[] cpf3 = new int[10];
@@ -20,7 +18,6 @@ public class VerificaCPF {
 	public void setCpf(int[] cpf) {
 		this.cpf = cpf;
 	}
-	
 	
 	public int[] lerCpf() throws IOException {
 		for (int i = 0; i < cpf.length; i++) {
@@ -77,9 +74,11 @@ public class VerificaCPF {
 	
 	public boolean isValid() {
 		if (primeiroDigito(cpf) == cpf[9] && segundoDigito(cpf) == cpf[10]) {
+			System.out.println("CPF válido");
 			return true;
 			
 		}else {
+			System.out.println("CPF inválido");
 			return false;
 		}
 	}
